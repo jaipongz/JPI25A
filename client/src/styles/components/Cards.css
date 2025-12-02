@@ -1,0 +1,94 @@
+/* Base Card */
+.service-card,
+.portfolio-item,
+.team-member,
+.article-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    transition: all 0.3s ease;
+}
+
+/* Service Card */
+.service-card {
+    padding: 2.5rem 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.service-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(to right, #FFA500, #FF8C00);
+}
+
+/* Portfolio Item */
+.portfolio-item {
+    overflow: hidden;
+}
+
+.portfolio-img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.portfolio-content {
+    padding: 1.5rem;
+}
+
+/* Team Member */
+.team-member {
+    padding: 2rem;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.team-member::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(to right, #FFA500, #FF8C00);
+}
+
+.profile-img {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin: 0 auto 1rem;
+    border: 5px solid #FFA500;
+    transition: transform 0.3s ease;
+}
+
+/* Article Card */
+.article-card {
+    overflow: hidden;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
+.article-thumbnail {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.article-content {
+    padding: 1.5rem;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+}

@@ -1,0 +1,38 @@
+/* Reset & Normalization */
+
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Thai:wght@300;400;600&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Noto Sans Thai", -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, sans-serif !important;
+    font-weight: 500;
+    font-size: 1.2rem;
+    line-height: 1.7;
+    color: #1a202c;
+    background-color: #ffffff;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+
+/* เพิ่มการรองรับ dark mode */
+@media (prefers-color-scheme: dark) {
+    body {
+        color: #e2e8f0;
+        background-color: #1a202c;
+    }
+    
+    a {
+        color: #63b3ed;
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}

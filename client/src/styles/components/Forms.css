@@ -1,0 +1,71 @@
+/* Form Groups */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Form Controls */
+.form-control {
+    width: 100%;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.3s;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #FFA500;
+    box-shadow: 0 0 0 3px rgba(255, 165, 0, 0.1);
+}
+
+/* Tag Input */
+.tag-input {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    padding: 8px;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    background: white;
+}
+
+.tag {
+    background: #e3f2fd;
+    color: #1976d2;
+    padding: 3px 8px;
+    border-radius: 10px;
+    font-size: 0.8rem;
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Rich Text Editor */
+.rich-text-editor {
+    border: 1px solid #ddd;
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.rich-text-toolbar {
+    background: #f5f5f5;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+}
+
+.rich-text-content {
+    min-height: 200px;
+    padding: 15px;
+    background: white;
+}
