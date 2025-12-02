@@ -1,4 +1,5 @@
 export const API_URL = process.env.REACT_APP_API_URL || 'http://localhost:5000/api';
+export const BASE_API_URL = process.env.BASE_API_URL || 'http://localhost:5000';
 export const THEME = {
     primary: '#FFA500',
     darkGray: '#333333',

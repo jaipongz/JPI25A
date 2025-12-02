@@ -5,7 +5,7 @@ import ServiceManager from '../components/Admin/ServiceManager';
 import PortfolioManager from '../components/Admin/PortfolioManager';
 import TeamManager from '../components/Admin/TeamManager';
 import { THEME } from '../config';
-
+import Dashboard from '../components/Admin/Dashboard';
 const AdminPanel = () => {
     const [activeTab, setActiveTab] = useState('articles');
     const navigate = useNavigate();
@@ -27,8 +27,10 @@ const AdminPanel = () => {
                 return <PortfolioManager />;
             case 'team':
                 return <TeamManager />;
+            case 'dashboard':
+                return <Dashboard />;
             default:
-                return <ArticleManager />;
+                return <Dashboard />;
         }
     };
 
@@ -36,10 +38,26 @@ const AdminPanel = () => {
         <div className="admin-container">
             <div className="admin-sidebar" style={{ backgroundColor: THEME.darkGray }}>
                 <div className="sidebar-header" style={{ padding: '2rem', color: THEME.primary }}>
-                    <h2>JaipongZ Admin</h2>
+                    <h2>Admin</h2>
                 </div>
                 <nav>
                     <ul style={{ listStyle: 'none' }}>
+                        <li>
+                            <button
+                                onClick={() => setActiveTab('dashboard')}
+                                style={{
+                                    width: '100%',
+                                    textAlign: 'left',
+                                    padding: '1rem 2rem',
+                                    background: activeTab === 'dashboard' ? THEME.primary : 'transparent',
+                                    color: 'white',
+                                    border: 'none',
+                                    cursor: 'pointer'
+                                }}
+                            >
+                                แดชบอร์ด
+                            </button>
+                        </li>
                         <li>
                             <button
                                 onClick={() => setActiveTab('articles')}
@@ -104,6 +122,7 @@ const AdminPanel = () => {
                                 ทีมงาน
                             </button>
                         </li>
+
                     </ul>
                 </nav>
             </div>
