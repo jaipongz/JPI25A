@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 const Header = () => {
     return (
@@ -7,15 +6,15 @@ const Header = () => {
             <div className="container">
                 <nav className="nav">
                     <div className="logo">
-                        JaipongZ Industries
+                        JaipongZ <span style={{color: '#FFFFF'}}>Industries</span>
                     </div>
                     <ul className="nav-links">
-                        <li><Link to="/">หน้าแรก</Link></li>
-                        <li><Link to="#services">บริการ</Link></li>
-                        <li><Link to="#portfolio">ผลงาน</Link></li>
-                        <li><Link to="#team">ทีมงาน</Link></li>
-                        <li><Link to="#articles">บทความ</Link></li>
-                        <li><Link to="/login" style={{ color: '#FFA500' }}>เข้าสู่ระบบ</Link></li>
+                        <li><a href="/">หน้าแรก</a></li>
+                        <li><a href="#services">บริการ</a></li>
+                        <li><a href="#portfolio">ผลงาน</a></li>
+                        <li><a href="#team">ทีมงาน</a></li>
+                        <li><a href="#articles">บทความ</a></li>
+                        <li><a href="/login" style={{ color: '#FFA500' }}>เข้าสู่ระบบ</a></li>
                     </ul>
                 </nav>
             </div>

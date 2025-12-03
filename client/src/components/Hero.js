@@ -11,7 +11,7 @@ const Hero = () => {
                     JaipongZ Industries ผู้เชี่ยวชาญด้านการพัฒนาเว็บไซต์และบริการ API แบบครบวงจร ด้วยทีมงานมืออาชีพและเทคโนโลยีล่าสุด
                 </p>
                 <a 
-                    href="#contact" 
+                    href="https://www.facebook.com/people/%E0%B8%AD%E0%B8%AD%E0%B8%81%E0%B9%81%E0%B8%9A%E0%B8%9A%E0%B8%84%E0%B8%A3%E0%B8%9A%E0%B8%A7%E0%B8%87%E0%B8%88%E0%B8%A3-Jaipongz-Industry/61576192463551/" 
                     className="btn animate-fade-in-up" 
                     style={{ animationDelay: '0.6s' }}
                 >

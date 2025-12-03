@@ -1,0 +1,215 @@
+/* Crop Box Controls */
+.crop-box {
+    position: absolute;
+    border: 3px solid #FFA500;
+    background-color: rgba(255, 165, 0, 0.1);
+    cursor: move;
+    box-sizing: border-box;
+    transition: border-color 0.2s;
+    user-select: none;
+}
+
+.crop-box:hover {
+    border-color: #FF8C00;
+    background-color: rgba(255, 165, 0, 0.15);
+}
+
+.crop-box.dragging {
+    border-color: #FF4500;
+    cursor: grabbing;
+    background-color: rgba(255, 165, 0, 0.2);
+}
+
+/* Resize Handles */
+.resize-handle {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    background-color: #FFA500;
+    border: 2px solid white;
+    border-radius: 2px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    transition: all 0.2s;
+    z-index: 10;
+}
+
+.resize-handle:hover {
+    background-color: #FF8C00;
+    transform: scale(1.2);
+}
+
+.resize-handle.corner {
+    width: 14px;
+    height: 14px;
+}
+
+.resize-handle.nw {
+    top: -7px;
+    left: -7px;
+    cursor: nw-resize;
+}
+
+.resize-handle.ne {
+    top: -7px;
+    right: -7px;
+    cursor: ne-resize;
+}
+
+.resize-handle.sw {
+    bottom: -7px;
+    left: -7px;
+    cursor: sw-resize;
+}
+
+.resize-handle.se {
+    bottom: -7px;
+    right: -7px;
+    cursor: se-resize;
+}
+
+.resize-handle.edge {
+    background-color: #FFA500;
+    border: 1px solid white;
+}
+
+.resize-handle.n {
+    top: -4px;
+    left: 20px;
+    right: 20px;
+    height: 8px;
+    cursor: ns-resize;
+}
+
+.resize-handle.s {
+    bottom: -4px;
+    left: 20px;
+    right: 20px;
+    height: 8px;
+    cursor: ns-resize;
+}
+
+.resize-handle.w {
+    left: -4px;
+    top: 20px;
+    bottom: 20px;
+    width: 8px;
+    cursor: ew-resize;
+}
+
+.resize-handle.e {
+    right: -4px;
+    top: 20px;
+    bottom: 20px;
+    width: 8px;
+    cursor: ew-resize;
+}
+
+/* Center Move Handle */
+.center-handle {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 30px;
+    height: 30px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border: 2px solid #FFA500;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: move;
+    transition: all 0.2s;
+    z-index: 5;
+}
+
+.center-handle:hover {
+    background-color: white;
+    transform: translate(-50%, -50%) scale(1.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* Container for crop image */
+.crop-image-container {
+    position: relative;
+    width: 100%;
+    height: 400px;
+    overflow: hidden;
+    background-color: #e0e0e0;
+    border-radius: 5px;
+    user-select: none;
+}
+
+/* Image inside container */
+.crop-image {
+    position: absolute;
+    display: block;
+    transform-origin: top left;
+    transition: transform 0.3s;
+}
+
+/* Zoom Controls */
+.zoom-controls-container {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 20;
+    display: flex;
+    gap: 5px;
+    background-color: rgba(255, 255, 255, 0.95);
+    padding: 8px;
+    border-radius: 6px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.15);
+    border: 1px solid #ddd;
+}
+
+.zoom-btn {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: white;
+    cursor: pointer;
+    color: #666;
+    font-size: 0.9rem;
+    transition: all 0.2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 40px;
+}
+
+.zoom-btn:hover {
+    background-color: #f8f9fa;
+    border-color: #FFA500;
+    color: #FFA500;
+    transform: translateY(-1px);
+}
+
+.zoom-level {
+    padding: 8px 12px;
+    font-size: 0.9rem;
+    color: #333;
+    font-weight: 500;
+    min-width: 60px;
+    text-align: center;
+    background-color: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+}
+
+/* Preview Canvas */
+.preview-canvas-container {
+    display: inline-block;
+    border: 2px solid #FFA500;
+    background-color: #f9f9f9;
+    padding: 8px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.preview-canvas-container canvas {
+    display: block;
+    background-color: #f0f0f0;
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}

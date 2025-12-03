@@ -24,8 +24,8 @@ const Footer = () => {
                         </ul>
                     </div>
                 </div>
-                <div className="text-center mt-4 pt-4" style={{ borderTop: '1px solid #444' }}>
-                    <p>© 2024 JaipongZ Industries. All rights reserved.</p>
+                <div className="text-center mt-4 pt-4" style={{ borderTop: '1px solid #444' ,padding:'10px 0'}}>
+                    <p>© 2025 JaipongZ Industries. All rights reserved.</p>
                 </div>
             </div>
         </footer>

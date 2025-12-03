@@ -18,8 +18,23 @@
 .logo {
     font-size: 1.8rem;
     font-weight: bold;
+    color: white;
+    transition: color 0.3s ease; /* เฟดสี */
+}
+
+.logo span {
+    color: #FFA500;
+    transition: color 0.3s ease; /* เฟดสี */
+}
+
+.logo:hover {
     color: #FFA500;
 }
+
+.logo:hover span {
+    color: white;
+}
+
 
 /* Navigation Links */
 .nav-links {
